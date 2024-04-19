@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Pet Adoption Centre</title>
+<link rel="stylesheet" type="text/css" href="static/styles.css">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+<style>
+body{
+    background:black
+}
+.background {
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    background-image: url("{{image_url}}");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+</style>
+</head>
+<body>
+<script src='static/script.js'></script>
+<script src='static/scriptl.js'></script>
+
+
+
+<!--Nav Bar-->
+<div class="header-container" id="navbar">
+    <img src="https://www.chattzoo.org/assets/images/_adopt-an-animal-logo-2019.png" alt="Logo" class="logo">
+    <div class="header-content">
+        <h2>Welcome to the Pet Adoption Center {{user}}<h2>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="header">Home</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1" class="header">About Us</a>
+            <a href="{{ url_for('what_we_do') }}" class="header">What We Do</a>
+            <a href="{{ url_for('adopt') }}" class="header">Adopt Here!</a>
+            <a href="{{ url_for('donate') }}" class="header">Donate Here!</a>
+            {% if is_admin(session['username']) %}
+                <a href="{{ url_for('admin') }}" class="header">Admin panel</a>
+            {% endif %}
+            
+        </nav>
+        
+    </div>
+    <div class="profile-container">
+        {% if logged_in %}
+        <div class="logout-container">
+            <a href="{{ url_for('logout') }}" class="logout">Logout
+                <img src="https://cdn-icons-png.flaticon.com/512/4400/4400629.png" alt="Logout" class="logout-img">
+            </a>
+        </div>
+            {% endif %}
+            <a href="{{ url_for('profile') }}" class="profile-link">
+                <div class="profile">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Profile Picture" class="profile-picture">
+                    <span class="profile_word">{{user}}</span>
+                </div>
+            </a>
+    </div>
+</div>
+<section class="background-container">
+    <div class='background'></div>
+</section>
+
+<div class='home'>
+    <h1 class="pet">
+        Pet
+    </h1>
+    <h1 class="adoption">
+        Adoption
+    </h1>
+    <h1 class="centre">
+        Center
+    </h1>
+</div>
+
+
+
+
+<div style="height: 1000px;"></div>
+</div>
+
+
+</body>
+</html>
