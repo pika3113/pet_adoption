@@ -1,0 +1,215 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	margin: 0; 
+	padding: 0;
+	}
+p { 
+	margin: 0; 
+	text-align: justify;
+	color:black
+}
+.home {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+}
+
+.home h1 {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-size: 120px;
+}
+
+.Pet, .Adoption, .Centre {
+	display: flex;
+	align-items: center;
+}
+
+.Pet {
+	order: 1;
+}
+
+.Adoption {
+	order: 2;
+}
+
+.Centre {
+	order: 3;
+}
+
+.background-container{
+	height:100%;
+	width:100%;
+	display:flex;
+	flex-direction: column;
+}
+.adopt-table {
+    font-size: 20px;
+}
+.header-container {
+    display: flex;
+    align-items: center; 
+    background-color: #007bff;
+    padding: 10px;
+	position: sticky;
+	top:0;
+}
+.profile-container {
+    position: absolute;
+    right:0;
+	flex-direction: row;
+	display:inline-flex;
+
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin-right:20px;
+	margin-bottom:10px;
+	color:white;
+	margin-top:18px;
+	text-decoration:none;
+
+}
+.profile-link{
+	text-decoration:none;
+}
+
+.profile_word{
+	color:white;
+	z-index:1;
+	text-align:right;
+	text-decoration:none;
+}
+.logout-container{
+	color:white;
+	display:flex;
+	align-items:center;
+}
+.logout{
+	color:black;
+	display:flex;
+	align-items:center;
+	padding:15px;
+	text-decoration:none;
+}
+.logout-img{
+	width:22px;
+	height:auto;
+	margin-left:5px;
+}
+
+.profile-picture{
+	width: 50px;
+    height: 50px;
+	border-radius: 50%; /* Makes the image round */
+}
+
+.header-content {
+	position:relative;
+    margin-left: 0px; /* Adjust as needed */
+}
+
+.logo {
+    width: 44px; /* Adjust the width of the logo */
+	height:auto;
+    margin-right: 10px; /* Add some space between the logo and links */
+}
+
+.header {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.header:last-child {
+    margin-right: 0;
+}
+
+.header:hover {
+    color: #ccc;
+}
+.header-container h2{
+	color:white;
+	margin: 0;
+	padding: 0px;
+}
+.navbar{
+	margin-top:-4px;
+}
+.pet-image {
+    width: auto;
+    height: 150px;
+	display: block;
+  	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.login-container {
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	width: 300px;
+	text-align: center;
+}
+
+.register-container {
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	width: 300px;
+	text-align: center;
+}
+.upload-animal-container {
+    width: 300px; 
+    margin: 0 auto;
+	padding:20px;
+	display:flex;
+	flex-direction:column;
+}
+.adopt-container {
+    width: auto; 
+	display:flex;
+	flex-direction: column;
+}
+.pet-listing{
+	padding:20px;
+	display:grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+h3{
+	margin:0;
+}
+label {
+    display: block;
+}
+
